@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Media Sniffer <span>PRO</span></h2>
+    <div class="controls">
+      <label class="switch">
+        <input type="checkbox" id="statusToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="Filtrar por nome...">
+    <select id="typeFilter">
+      <option value="all">Todos</option>
+      <option value="m3u8">M3U8</option>
+      <option value="mp4">MP4</option>
+      <option value="ts">TS</option>
+    </select>
+  </div>
+
+  <div id="mediaList" class="list-container"></div>
+
+  <div class="footer">
+    <div class="stats">Total: <span id="totalCount">0</span></div>
+    <div class="actions">
+      <button id="exportTxt" title="Exportar TXT">TXT</button>
+      <button id="exportJson" title="Exportar JSON">JSON</button>
+      <button id="clearAll" class="danger">Limpar</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
